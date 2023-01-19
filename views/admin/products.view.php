@@ -17,6 +17,20 @@
                 </div>
             </div>
             <h2>Products</h2>
+            <?php if (isset($_GET['edit_success_message'])) { ?>
+                <p class="text-center" style="color:green;"><?php echo $_GET['edit_success_message']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['edit_failure_message'])) { ?>
+                <p class="text-center" style="color:red;"><?php echo $_GET['edit_failure_message']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['deleted_success_message'])) { ?>
+                <p class="text-center" style="color:green;"><?php echo $_GET['deleted_success_message']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['deleted_failure_message'])) { ?>
+                <p class="text-center" style="color:red;"><?php echo $_GET['deleted_failure_message']; ?></p>
+            <?php } ?>
+
+
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -42,8 +56,8 @@
                                 <td><?= $product['product_special_offer'] ?>%</td>
                                 <td><?= $product['product_category'] ?></td>
                                 <td><?= $product['product_color'] ?></td>
-                                <td><a class="btn btn-primary" href="edit_product?product_id=<?= $product['product_id'] ?>">Edit</a></td>
-                                <td><a class="btn btn-danger">Delete</a></td>
+                                <td><a class="btn btn-primary" href="edit-product?product_id=<?= $product['product_id'] ?>">Edit</a></td>
+                                <td><a class="btn btn-danger" href="delete-product?product_id=<?= $product['product_id'] ?>">Delete</a></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
