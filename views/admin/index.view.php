@@ -17,6 +17,12 @@
                 </div>
             </div>
             <h2>Orders</h2>
+            <?php if (isset($_GET['order_updated'])) { ?>
+                <p class="text-center" style="color:green;"><?php echo $_GET['order_updated']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['order_failed'])) { ?>
+                <p class="text-center" style="color:red;"><?php echo $_GET['order_failed']; ?></p>
+            <?php } ?>
             <div class="table-responsive">
                 <table class="table table-striped table-sm">
                     <thead>
@@ -40,7 +46,7 @@
                                 <td><?= $order['order_date'] ?></td>
                                 <td><?= $order['user_phone'] ?></td>
                                 <td><?= $order['user_address'] ?></td>
-                                <td><a class="btn btn-primary">Edit</a></td>
+                                <td><a class="btn btn-primary" href="edit-order?order_id=<?= $order['order_id'] ?>">Edit</a></td>
                                 <td><a class="btn btn-danger">Delete</a></td>
                             </tr>
                         <?php endforeach; ?>

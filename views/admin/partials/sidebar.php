@@ -2,7 +2,7 @@
     <div class="position-sticky pt-3">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <a class="nav-link active" aria-current="page" href="/admin/index">
                     <span data-feather="home"></span>
                     Dashboard
                 </a>
@@ -20,7 +20,7 @@
                 </a>
             </li>        
             <li class="nav-item">
-                <a class="nav-link" href="add_new_product">
+                <a class="nav-link" href="create-product">
                     <span data-feather="users"></span>
                     Add New Product
                 </a>

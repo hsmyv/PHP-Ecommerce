@@ -29,6 +29,12 @@
             <?php if (isset($_GET['deleted_failure_message'])) { ?>
                 <p class="text-center" style="color:red;"><?php echo $_GET['deleted_failure_message']; ?></p>
             <?php } ?>
+            <?php if (isset($_GET['create_success_message'])) { ?>
+                <p class="text-center" style="color:green;"><?php echo $_GET['create_success_message']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['create_failure_message'])) { ?>
+                <p class="text-center" style="color:red;"><?php echo $_GET['create_failure_message']; ?></p>
+            <?php } ?>
 
 
             <div class="table-responsive">
@@ -51,7 +57,7 @@
                             <tr>
                                 <td><?= $product['product_id'] ?></td>
                                 <td> <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image'] ?>" alt=""></td>
-                                <td><?= $product['product_name'] ?></td>
+                                <td> <a href="/product?id=<?= $product['product_id'] ?>"><?= $product['product_name'] ?></a></td>
                                 <td>$<?= $product['product_price'] ?></td>
                                 <td><?= $product['product_special_offer'] ?>%</td>
                                 <td><?= $product['product_category'] ?></td>
