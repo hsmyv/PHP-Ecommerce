@@ -21,3 +21,16 @@ function authorize($condition, $status = Response::FORBIDDEN)
         abort($status);
     }
 }
+
+function authAdmin()
+{
+    if (!isset($_SESSION['admin_logged_in'])) {
+        header('location: login');
+        exit();
+    }
+}
+
+function check_image_exists($image)
+{
+    if(empty($image)) return $image = "default.png";
+}

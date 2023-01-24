@@ -21,5 +21,7 @@ return $routes = [
     '/admin/edit-product'    => 'controllers/admin/edit_product.php',
     '/admin/delete-product'  => 'controllers/admin/delete_product.php',
     '/admin/edit-order'      => 'controllers/admin/edit_order.php',
-    '/admin/create-product'  => 'controllers/admin/add_product.php'
+    '/admin/create-product'  => 'controllers/admin/add_product.php',
+    '/admin/account'         => 'controllers/admin/account.php',
+
 ];

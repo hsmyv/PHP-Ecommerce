@@ -7,7 +7,7 @@
 <section class="container single-product my-5 pt-5">
     <div class="row mt-5">
         <div class="col-lg-5 col-md-6 col-sm-12">
-            <img class="img-fluid w-100" src="public/imgs/<?= $product['product_image'] ?>" id="mainImg">
+                <img style="display:flex; height:400px;" class="img-fluid w-100" src="public/imgs/<?= $product['product_image'] ?>" id="mainImg">
             <div class="small-img-group">
                 <div class="small-img-col">
                     <img src="public/imgs/<?= $product['product_image'] ?>" width="100%" class="small-img" alt="">
@@ -52,7 +52,7 @@
     </div>
     <div class="row mx-auto container-fluid">
         <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-            <img class="img-fluid mb-3" src="public/imgs/featured1.jpg" alt="">
+            <img style="height:250px; width: 250px;" class="img-fluid mb-3" src="public/imgs/featured1.jpg" alt="">
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -65,7 +65,7 @@
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-            <img class="img-fluid mb-3" src="public/imgs/featured2.jpg" alt="">
+            <img style="height:250px; width: 250px;" class="img-fluid mb-3" src="public/imgs/featured2.jpg" alt="">
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -78,7 +78,7 @@
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-            <img class="img-fluid mb-3" src="public/imgs/featured3.jpg" alt="">
+            <img style="height:250px; width: 250px;" class="img-fluid mb-3" src="public/imgs/featured3.jpg" alt="">
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -91,7 +91,7 @@
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-            <img class="img-fluid mb-3" src="public/imgs/featured4.jpg" alt="">
+            <img style="height:250px; width: 250px;" class="img-fluid mb-3" src="public/imgs/featured4.jpg" alt="">
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>

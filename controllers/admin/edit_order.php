@@ -1,5 +1,7 @@
 <?php
 session_start();
+authAdmin();
+
 $config = require('core/config.php');
 $db = new Database($config['database']);
 

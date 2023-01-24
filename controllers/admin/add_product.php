@@ -1,5 +1,7 @@
 <?php
 session_start();
+authAdmin();
+
 $config = require('core/config.php');
 $db = new Database($config['database']);
 
@@ -70,6 +72,8 @@ if (isset($_POST['create_product'])) {
     } else {
         header("location: products?create_failure_message=Error occurred, try again");
     }
+} else if (isset($_POST['cancel'])) {
+    header("location: products");
 }
 
 require "views/admin/add-product.view.php";

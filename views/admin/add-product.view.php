@@ -13,7 +13,7 @@
                 </div>
             </div>
 
-            <h2>Edit Product</h2>
+            <h2>Add Product</h2>
             <div class="table-responsive">
 
                 <div class="mx-auto container">

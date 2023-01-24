@@ -61,6 +61,26 @@
                                 <label for="">Special Offer/Sale</label>
                                 <input type="text" class="form-control" value="<?= $product['product_special_offer'] ?>" id="product_offer" name="offer">
                             </div>
+                            <div class="form-group mt-2">
+                                <label for="">Image 1</label>
+                                <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image'] ?>" alt="">
+                                <input type="file" class="form-control" id="image1" name="image1" placeholder="Image 1">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="">Image 2</label>
+                                <td> <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image2'] ?>" alt=""></td>
+                                <input type="file" class="form-control" id="image2" name="image2" placeholder="Image 2">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="">Image 3</label>
+                                <td> <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image3']?>" alt=""></td>
+                                <input type="file" class="form-control" id="image3" name="image3" placeholder="Image 3">
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="">Image 4</label>
+                                <td> <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image4'] ?>" alt=""></td>
+                                <input type="file" class="form-control" id="image4" name="image4" placeholder="Image 4">
+                            </div>
                             <div class="form-group mt-3">
                                 <button type="submit" name="edit_btn" class="btn btn-primary">Edit</button>
                                 <button type="submit" name="cancel" class="btn btn-primary">Cancel</button>

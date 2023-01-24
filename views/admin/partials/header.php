@@ -41,8 +41,8 @@
         <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <?php if(isset($_SESSION['admin_logged_in'])){?>
-                <a class="nav-link px-3" href="logout?logout=1">Sign out</a>
+                <?php if (isset($_SESSION['admin_logged_in'])) { ?>
+                    <a class="nav-link px-3" href="logout?logout=1">Sign out</a>
                 <?php } ?>
             </div>
         </div>

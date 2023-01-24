@@ -1,13 +1,10 @@
 <?php
 session_start();
+authAdmin();
+
 $config = require('core/config.php');
 $db = new Database($config['database']);
 
-
-if (!isset($_SESSION['admin_logged_in'])) {
-    header('location: login');
-    exit();
-}
 
 
 if (isset($_GET['product_id'])) {

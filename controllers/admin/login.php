@@ -8,7 +8,7 @@ $config = require('core/config.php');
 $db     = new Database($config['database']);
 
 if (isset($_SESSION['admin_logged_in'])) {
-    header('location: dashboard');
+    header('location: index');
     exit;
 }
 
@@ -30,7 +30,7 @@ if (isset($_POST['login_btn'])) {
         $_SESSION['admin_email'] = $email;
         $_SESSION['admin_logged_in'] = true;
 
-        header('location: dashboard?login_success=logged in successfully');
+        header('location: index?Login_success=logged in successfully');
 
     } else {
         header('location: login?error=could not verify your account');
