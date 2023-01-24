@@ -25,7 +25,7 @@ if (isset($_POST['login_btn'])) {
 
     if ($user) {
         $_SESSION['user_id'] = $user['user_id'];
-        //$_SESSION['user_name'] =$user['user_name'];  // user's name can't get
+        $_SESSION['user_name'] =$user['user_name'];  // user's name can't get
         $_SESSION['user_email'] = $email;
         $_SESSION['logged_in'] = true;
 

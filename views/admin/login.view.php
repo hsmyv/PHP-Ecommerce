@@ -24,9 +24,7 @@
             <div class="form-group">
                 <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login">
             </div>
-            <div class="form-group">
-                <a href="register" id="register-url" class="btn">Don't have account? Register</a>
-            </div>
+           
         </form>
 
     </div>

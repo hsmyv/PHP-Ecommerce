@@ -56,7 +56,7 @@
 
     </table>
 
-    <div class="cart-total">
+    <div class="cart-total my-5">
         <table>
             <!-- <tr>
                 <td>Subtotal</td>
