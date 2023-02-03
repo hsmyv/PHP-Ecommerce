@@ -11,7 +11,6 @@ if (isset($_POST['order_details_btn']) && isset($_POST['order_id'])) {
     $order_detail =  $db->query("SELECT * FROM order_items WHERE order_id= :id", [
         'id' => $order_id
     ])->find();
-
     $order_total_price = calcTotalOrderPrice($order_detail);
 } else {
     header('location: account');
@@ -22,14 +21,14 @@ if (isset($_POST['order_details_btn']) && isset($_POST['order_id'])) {
 function calcTotalOrderPrice($order_detail)
 {
     $total = 0;
-    while($order_detail)
-
+    // while($order_detail)
+    
         $product_price = $order_detail['product_price'];
         $product_quantity = $order_detail['product_quantity'];
-
         $total = $total + ($product_price * $product_quantity);
-}
+    
     return $total;
+}
 
 
 

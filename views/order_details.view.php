@@ -43,8 +43,7 @@
         </tr>
 
     </table>
-
-    <?php if ($order_status == "not paid") { ?>
+    <?php if ($order_status == "not_paid") { ?>
         <form style="float: right;" method="POST" action="payment">
             <input type="hidden" name="order_id" value="<?php echo $order_id;?>">
             <input type="hidden" name="order_total_price" value="<?php echo $order_total_price;?>">
