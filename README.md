@@ -14,3 +14,12 @@
 ![payment](https://user-images.githubusercontent.com/111653544/222162780-a6f38033-b835-4ddf-8306-aa66fd758d13.PNG)
 ![paymen2](https://user-images.githubusercontent.com/111653544/222162792-fd68c79a-bd7d-4e92-8aa0-3bfd2ac12c64.PNG)
 ![payment3](https://user-images.githubusercontent.com/111653544/222162801-28851162-35ce-421b-8c12-d71d2220e7fb.PNG)
+
+<h3>Admin Panel</h3>
+
+![page1](https://user-images.githubusercontent.com/111653544/232404365-4cf66a99-bc19-40d6-a184-f9a58fc2fedf.PNG)
+![page2](https://user-images.githubusercontent.com/111653544/232404373-2ce1111e-cd44-47e5-b399-9e78931c34c1.PNG)
+![page3](https://user-images.githubusercontent.com/111653544/232404380-0cf5f1ab-8394-4b84-8433-e7fa874f7796.PNG)
+![page4](https://user-images.githubusercontent.com/111653544/232404386-cde1562d-35ef-464a-baa4-af3c87366845.PNG)
+![edit page4](https://user-images.githubusercontent.com/111653544/232404390-00c27a05-1af6-49e8-bf41-349702cfd603.PNG)
+![edit page5](https://user-images.githubusercontent.com/111653544/232404395-92fa3b87-3242-4b48-b8f7-aee555bc59c7.PNG)
