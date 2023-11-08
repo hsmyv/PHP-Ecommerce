@@ -41,18 +41,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($orders as $order) : ?>
-                            <tr>
-                                <td><?= $order['order_id'] ?></td>
-                                <td><?= $order['order_status'] ?></td>
-                                <td><?= $order['user_id'] ?></td>
-                                <td><?= $order['order_date'] ?></td>
-                                <td><?= $order['user_phone'] ?></td>
-                                <td><?= $order['user_address'] ?></td>
-                                <td><a class="btn btn-primary" href="edit-order?order_id=<?= $order['order_id'] ?>">Edit</a></td>
-                                <td><a class="btn btn-danger">Delete</a></td>
-                            </tr>
-                        <?php endforeach; ?>
+                    <?php foreach ($orders as $order) : ?>
+                    <tr>
+                        <td><?= $order['order_id'] ?></td>
+                        <td><?= $order['order_status'] ?></td>
+                        <?php
+                        $user = $db->query('SELECT user_name FROM users WHERE user_id = :id', [
+                            'id' => $order['user_id']
+                        ])->findOrFail();
+                        $userName = $user['user_name'] ?? 'User not found'; 
+                        ?>
+                        <td><?= $userName ?></td>
+                        <td><?= $order['order_date'] ?></td>
+                        <td><?= $order['user_phone'] ?></td>
+                        <td><?= $order['user_address'] ?></td>
+                        <td><a class="btn btn-primary" href="edit-order?order_id=<?= $order['order_id'] ?>">Edit</a></td>
+                        <td><a class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <?php endforeach; ?>
+
                     </tbody>
                 </table>
 
