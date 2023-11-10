@@ -22,6 +22,10 @@ return $routes = [
     '/admin/delete-product'  => 'controllers/admin/delete_product.php',
     '/admin/edit-order'      => 'controllers/admin/edit_order.php',
     '/admin/create-product'  => 'controllers/admin/add_product.php',
+    '/admin/categories'      => 'controllers/admin/categories.php',
+    '/admin/create-category' => 'controllers/admin/add_category.php',
+    '/admin/edit-category'   => 'controllers/admin/edit_category.php',
+    '/admin/delete-category' => 'controllers/admin/delete_category.php',
     '/admin/account'         => 'controllers/admin/account.php',
 
 ];

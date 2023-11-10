@@ -26,6 +26,18 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="categories">
+                    <span data-feather="shopping-cart"></span>
+                    Categories
+                </a>
+            </li>        
+            <li class="nav-item">
+                <a class="nav-link" href="create-category">
+                    <span data-feather="users"></span>
+                    Add New Category
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="layers"></span>
                     Integrations

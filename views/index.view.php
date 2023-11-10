@@ -8,10 +8,10 @@
 <section id="home">
     <div class="container">
         <h5>New Arrivals</h5>
-        <h1><span>Best Prices</span> This Season</h1>
+        <h1><span>Exclusive Phone</span> Offers</h1>
         <p>
-            </h1>Eshop offers the best products for the most affordable prices</p>
-        <button>Shop Now</button>
+            </h1>We offer the best products for the most affordable prices</p>
+            <a href="/shop"><button class="text-uppercase">Shop Now</button></a>
     </div>
 </section>
 
@@ -21,7 +21,7 @@
         <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="public/imgs/brand1.png" />
         <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="public/imgs/brand2.png" />
         <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="public/imgs/brand3.jpg" />
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="public/imgs/brand4.jpg" />
+        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="public/imgs/brand4.png" />
     </div>
 </section>
 
@@ -30,26 +30,31 @@
     <div class="row p-0 m-0">
         <!--One-->
         <div class="one col-lg-4 col-md-12 col-sm-12 p-0">
-            <img class="img fluid" src="public/imgs/1.jpg" alt="">
+            <img class="img fluid" src="public/imgs/shop1.jpg" alt="">
             <div class="details">
-                <h2>Extremely Awesome Shoes</h2>
-                <button class="text-uppercase">Shop Now</button>
+                <div style="margin-left:4%">
+                <h2>Phones</h2>
+                <a href="/shop"><button class="text-uppercase">Shop Now</button></a>
+                </div>
+
             </div>
         </div>
         <!--Two-->
         <div class="one col-lg-4 col-md-12 col-sm-12 p-0">
-            <img class="img fluid" src="public/imgs/2.jpg" alt="">
+            <img class="img fluid" src="public/imgs/shop2.jpg" alt="">
             <div class="details">
-                <h2> Awesome Jacket</h2>
-                <button class="text-uppercase">Shop Now</button>
+                <h2>Tablets</h2>
+                <a href="/shop"><button class="text-uppercase">Shop Now</button></a>
             </div>
         </div>
         <!--Three-->
         <div class="one col-lg-4 col-md-12 col-sm-12 p-0">
-            <img class="img fluid" src="public/imgs/3.jpg" alt="">
+            <img class="img fluid" src="public/imgs/shop3.jpg" alt="">
             <div class="details">
-                <h2>50% OFF Bags</h2>
-                <button class="text-uppercase">Shop Now</button>
+                <div style="margin-right:4%">
+                    <h2>Computers</h2>
+                    <a href="/shop"><button class="text-uppercase">Shop Now</button></a>
+                </div>
             </div>
         </div>
     </div>
@@ -89,7 +94,7 @@
 <section id="banner" class="my-5 py-5">
     <div class="container">
         <h4>MID SEASON'S SALE</h4>
-        <h1>Autumn Collection <br> UP to 30% OFF</h1>
+        <h1>Explore Fall Tech Picks <br> UP to 30% OFF</h1>
         <button class="text-uppercase">shop now</button>
     </div>
 </section>
