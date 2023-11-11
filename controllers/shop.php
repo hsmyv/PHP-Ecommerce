@@ -20,11 +20,10 @@ if (isset($_POST['search'])) {
     $category = $_POST['category'];
     $price    = $_POST['price'];
     //2. return number of products
-    $total_records = $db->query("SELECT count(*) as total_records FROM products where product_category=:pc AND product_price<=:pp", [
-        'pc' => $category,
-        'pp' => $price
-    ])->get();
-
+     $total_records = $db->query("SELECT count(*) as total_records FROM products where category_id=:pc AND product_price<=:pp", [
+         'pc' => $category,
+         'pp' => $price
+     ])->get();
 
     //3. products per page
 
@@ -39,7 +38,7 @@ if (isset($_POST['search'])) {
     $category = $_POST['category'];
     $price    = $_POST['price'];
     //4. get all products
-    $products = $db->query( "SELECT * FROM products  where product_category=:pc AND product_price<=:pp LIMIT $offset, $total_records_per_page",[
+    $products = $db->query( "SELECT * FROM products  where category_id=:pc AND product_price<=:pp LIMIT $offset, $total_records_per_page",[
         'pc' => $category,
         'pp' => $price
     ])->get();

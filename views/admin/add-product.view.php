@@ -39,10 +39,9 @@
                             <div class="form-group mt-2">
                                 <label for="">Category</label>
                                 <select class="form-select" required name="category" id="">
-                                    <option value="bags">Bags</option>
-                                    <option value="shoes">Shoes</option>
-                                    <option value="watches">Watches</option>
-                                    <option value="coats">Clothes</option>
+                                <?php foreach ($categories as $category) : ?>
+                                    <option value="<?= $category['id'] ?>"><?=$category['name']?></option>
+                                <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">

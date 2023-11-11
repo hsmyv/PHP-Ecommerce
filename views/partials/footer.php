@@ -34,12 +34,12 @@
           <div class="footer-one col-lg-3 col-md-6 col-sm-12">
               <h5 class="pb-2">Instagram</h5>
               <div class="row">
-                  <img src="public/imgs/featured1.jpg" class="img-fluid w-25 h-100 m-2">
-                  <img src="public/imgs/featured2.jpg" class="img-fluid w-25 h-100 m-2">
-                  <img src="public/imgs/featured3.jpg" class="img-fluid w-25 h-100 m-2">
-                  <img src="public/imgs/featured4.jpg" class="img-fluid w-25 h-100 m-2">
-                  <img src="public/imgs/featured1.jpg" class="img-fluid w-25 h-100 m-2">
-                  <img src="public/imgs/featured3.jpg" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured1.png" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured2.png" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured3.png" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured4.jpeg" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured1.png" class="img-fluid w-25 h-100 m-2">
+                  <img src="public/imgs/featured3.png" class="img-fluid w-25 h-100 m-2">
               </div>
           </div>
       </div>
@@ -49,7 +49,7 @@
                   <img src="public/imgs/payment.png" alt="">
               </div>
               <div class="col-lg-3 col-md-5 col-sm-12 mb-4 text-nowrap mb-2">
-                  <p>eCommerce 2025 All Right Reserved</p>
+                  <p>Male Fashion 2025 All Right Reserved</p>
               </div>
               <div class="col-lg-3 col-md-5 col-sm-12 mb-4 ">
                   <a href="#"><i class="fab fa-facebook"></i></a>

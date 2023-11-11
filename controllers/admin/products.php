@@ -20,7 +20,7 @@ $total_records = $db->query("SELECT count(*) as total_records FROM products")->f
 
 //3. products per page
 
-$total_records_per_page = 4;
+$total_records_per_page = 30;
 $offset = ($page_no - 1) * $total_records_per_page;
 $previos_page = $page_no - 1;
 $next_page    = $page_no + 1;

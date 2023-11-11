@@ -5,6 +5,12 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2">Dashboard</h1>
+                <p class="text-center" style="color:red"><?php if (isset($_GET['error'])) {
+                                                                            echo $_GET['error'];
+                                                                        } ?></p>
+                            <p class="text-center" style="color:green"><?php if (isset($_GET['success'])) {
+                                                                            echo $_GET['success'];
+                                                                        } ?></p>
                 <?php if (isset($_GET['login_success'])) { ?>
                     <p class="text-center" style="color:green;"><?php echo $_GET['login_success']; ?></p>
                 <?php } ?>
@@ -56,7 +62,7 @@
                         <td><?= $order['user_phone'] ?></td>
                         <td><?= $order['user_address'] ?></td>
                         <td><a class="btn btn-primary" href="edit-order?order_id=<?= $order['order_id'] ?>">Edit</a></td>
-                        <td><a class="btn btn-danger">Delete</a></td>
+                        <td><a class="btn btn-danger" href="delete-order?order_id=<?= $order['order_id'] ?>">Delete</a></td>
                     </tr>
                     <?php endforeach; ?>
 

@@ -39,18 +39,18 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <p>Category</p>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" value="shoes" name="category" id="category_one" <?php if(isset($category) && $category=='shoes'){echo 'checked';}?>>
+                            <input type="radio" class="form-check-input" value="9" name="category" id="category_one" <?php if(isset($category) && $category==9){echo 'checked';}?>>
                             <label class="form-check-label" for="flexRadioDefault1">
-                                Shoes
+                                Iphone
                             </label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" class="form-check-input" value="coats" name="category" id="category_two" <?php if(isset($category) && $category=='coats'){echo 'checked';}?>>
+                            <input type="radio" class="form-check-input" value="10" name="category" id="category_two" <?php if(isset($category) && $category==10){echo 'checked';}?>>
                             <label class="form-check-label" for="flexRadioDefault2">
-                                Coats
+                                Samsung
                             </label>
                         </div>
-                        <div class="form-check">
+                        <!-- <div class="form-check">
                             <input type="radio" class="form-check-input" value="watches" name="category" id="category_two" <?php if(isset($category) && $category=='watches'){echo 'checked';}?>>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 Watches
@@ -61,7 +61,7 @@
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Bags
                             </label>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="row mx-auto container mt-5">

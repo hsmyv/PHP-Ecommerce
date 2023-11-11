@@ -70,7 +70,7 @@
     <div class="row mx-auto container-fluid">
         <?php foreach ($features as $feature) : ?>
             <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-                <img class="img-fluid mb-3" src="public/imgs/<?= $feature['product_image'] ?>" alt="">
+            <img style="width: 700px; height: 500px; object-fit: cover;" class="img-fluid mb-3" src="public/imgs/<?= $feature['product_image'] ?>" alt="">
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -103,15 +103,15 @@
 <!--Clothes-->
 <section id="featured" class="my-5">
     <div class="container text-center mt-5 py-5">
-        <h3>Dresses & Coats</h3>
+        <h3>Iphone</h3>
         <hr class="mx-auto">
-        <p>Here you can check out our amazing clothes</p>
+        <p>Here you can check out our amazing phones</p>
     </div>
     <div class="row mx-auto container-fluid">
 
-        <?php foreach ($clothes as $cloth) : ?>
+        <?php foreach ($iphones as $iphone) : ?>
             <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-                <img class="img-fluid mb-3" src="public/imgs/<?= $cloth['product_image'] ?>" alt="">
+            <img style="width: 700px; height: 500px; object-fit: cover;" class="img-fluid mb-3" src="public/imgs/<?= $iphone['product_image'] ?>" alt="">
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -119,9 +119,9 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h5 class="p-name"><?= $cloth['product_name'] ?></h5>
-                <h4 class="p-price"><?= $cloth['product_price'] ?></h4>
-                <a href="product?id=<?= $cloth['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
+                <h5 class="p-name"><?= $iphone['product_name'] ?></h5>
+                <h4 class="p-price"><?= $iphone['product_price'] ?></h4>
+                <a href="product?id=<?= $iphone['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
             </div>
         <?php endforeach; ?>
 
@@ -132,14 +132,14 @@
 <!--Watches-->
 <section id="watches" class="my-5">
     <div class="container text-center mt-5 py-5">
-        <h3>Best Watches</h3>
+        <h3>Best Samsung Phones</h3>
         <hr class="mx-auto">
-        <p>Check out our amazing watches</p>
+        <p>Check out our amazing samsungs</p>
     </div>
     <div class="row mx-auto container-fluid">
-        <?php foreach ($watches as $watch) : ?>
+        <?php foreach ($samsungs as $samsung) : ?>
             <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-                <img class="img-fluid mb-3" src="public/imgs/<?= $watch['product_image'] ?>" alt="">
+            <img style="width: 700px; height: 500px; object-fit: cover;" class="img-fluid mb-3" src="public/imgs/<?= $samsung['product_image'] ?>" alt="">
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -147,9 +147,9 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h5 class="p-name"><?= $watch['product_name'] ?></h5>
-                <h4 class="p-price"><?= $watch['product_price'] ?></h4>
-                <a href="product?id=<?= $watch['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
+                <h5 class="p-name"><?= $samsung['product_name'] ?></h5>
+                <h4 class="p-price"><?= $samsung['product_price'] ?></h4>
+                <a href="product?id=<?= $samsung['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
             </div>
         <?php endforeach; ?>
     </div>
@@ -157,14 +157,14 @@
 <!--Shoes-->
 <section id="shoes" class="my-5">
     <div class="container text-center mt-5 py-5">
-        <h3>Shoes</h3>
+        <h3>Iphones</h3>
         <hr class="mx-auto">
-        <p>Here you can check out our amazing shoes</p>
+        <p>Here you can check out our amazing iphones</p>
     </div>
     <div class="row mx-auto container-fluid">
-        <?php foreach ($shoes as $shoe) : ?>
+        <?php foreach ($iphones as $iphone) : ?>
             <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-                <img class="img-fluid mb-3" src="public/imgs/<?= $shoe['product_image'] ?>" alt="">
+            <img style="width: 700px; height: 500px; object-fit: cover;" class="img-fluid mb-3" src="public/imgs/<?= $iphone['product_image'] ?>" alt="">
                 <div class=" star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -172,9 +172,9 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h5 class="p-name"><?= $shoe['product_name'] ?></h5>
-                <h4 class="p-price">$<?= $shoe['product_price'] ?></h4>
-                <a href="product?id=<?= $shoe['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
+                <h5 class="p-name"><?= $iphone['product_name'] ?></h5>
+                <h4 class="p-price">$<?= $iphone['product_price'] ?></h4>
+                <a href="product?id=<?= $iphone['product_id'] ?>"><button class="buy-btn">Buy Now</button></a>
             </div>
         <?php endforeach; ?>
 

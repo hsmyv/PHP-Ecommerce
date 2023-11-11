@@ -5,6 +5,7 @@ authAdmin();
 $config = require('core/config.php');
 $db = new Database($config['database']);
 
+$categories = $db->query("SELECT * FROM categories")->get();
 
 if (isset($_POST['create_product'])) {
     $name        = $_POST['name'];
@@ -14,15 +15,17 @@ if (isset($_POST['create_product'])) {
     $offer       = $_POST['offer'];
     $category    = $_POST['category'];
 
+    $picture_name = uniqid('image_', true);
+
     $image1      = $_FILES['image1']['tmp_name'];
     $image2      = $_FILES['image2']['tmp_name'];
     $image3      = $_FILES['image3']['tmp_name'];
     $image4      = $_FILES['image4']['tmp_name'];
 
-    $image_name1 = $name . "1.jpeg";
-    $image_name2 = $name . "2.jpeg";
-    $image_name3 = $name . "3.jpeg";
-    $image_name4 = $name . "4.jpeg";
+    $picture_name1 = $name . "1.jpeg";
+    $picture_name2 = $name . "2.jpeg";
+    $picture_name3 = $name . "3.jpeg";
+    $picture_name4 = $name . "4.jpeg";
 
     move_uploaded_file($image1, "public/imgs/" . $image_name1);
     move_uploaded_file($image2, "public/imgs/" . $image_name2);
@@ -32,7 +35,7 @@ if (isset($_POST['create_product'])) {
     $create = $db->query(
         "INSERT INTO products( 
         product_name,
-        product_category,
+        category_id,
         product_description,
         product_image,
         product_image2,
@@ -44,7 +47,7 @@ if (isset($_POST['create_product'])) {
         )
         Values(
         :product_name,
-        :product_category,        
+        :category_id,        
         :product_description, 
         :product_image,
         :product_image2,
@@ -56,7 +59,7 @@ if (isset($_POST['create_product'])) {
         )",
         [
             'product_name'          => $name,
-            'product_category'      => $category,
+            'category_id'           => $category,
             'product_description'   => $description,
             'product_image'         => $image_name1,
             'product_image2'        => $image_name2,

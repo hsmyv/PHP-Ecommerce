@@ -39,18 +39,13 @@
                             <div class="form-group mt-2">
                                 <label for="">Category</label>
                                 <select class="form-select" required name="category" id="">
-                                    <option value="bags" <?php if ($product['product_category'] == 'bags') {
+                                    <option value="<?= $product['category_id'] ?>" <?php if ($product['category_id'] == '9') {
                                                                 echo "selected";
-                                                            } ?>>Bags</option>
-                                    <option value="shoes" <?php if ($product['product_category'] == 'shoes') {
+                                                            } ?>>Iphone</option>
+                                    <option value="<?= $product['category_id'] ?>" <?php if ($product['category_id'] == '10') {
                                                                 echo "selected";
-                                                            } ?>>Shoes</option>
-                                    <option value="watches" <?php if ($product['product_category'] == 'watches') {
-                                                                echo "selected";
-                                                            } ?>>Watches</option>
-                                    <option value="coats" <?php if ($product['product_category'] == 'coats') {
-                                                                echo "selected";
-                                                            } ?>>Clothes</option>
+                                                            } ?>>Samsung</option>
+                    
                                 </select>
                             </div>
                             <div class="form-group">

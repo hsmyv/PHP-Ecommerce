@@ -60,7 +60,12 @@
                                 <td> <a href="/product?id=<?= $product['product_id'] ?>"><?= $product['product_name'] ?></a></td>
                                 <td>$<?= $product['product_price'] ?></td>
                                 <td><?= $product['product_special_offer'] ?>%</td>
-                                <td><?= $product['product_category'] ?></td>
+                                <td>
+                                <?php
+                                    $category = getCategoryById($product['category_id']);
+                                    echo $category['name'];
+                                ?>
+                                </td>
                                 <td><?= $product['product_color'] ?></td>
                                 <td><a class="btn btn-primary" href="edit-product?product_id=<?= $product['product_id'] ?>">Edit</a></td>
                                 <td><a class="btn btn-danger" href="delete-product?product_id=<?= $product['product_id'] ?>">Delete</a></td>
