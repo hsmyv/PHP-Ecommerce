@@ -5,6 +5,8 @@ authAdmin();
 $config = require('core/config.php');
 $db = new Database($config['database']);
 
+$categories = $db->query("SELECT * FROM categories")->get();
+
 if(isset($_GET['product_id'])){
     $product_id = $_GET['product_id'];
     $product = $db->query('SELECT * FROM products WHERE product_id= :id', [
@@ -20,11 +22,19 @@ if(isset($_GET['product_id'])){
     $color       = $_POST['color'];
     $offer       = $_POST['offer'];
     $category    = $_POST['category'];
-    
-    $picture_name = uniqid('image_', true);
 
+    $product = $db->query('SELECT * FROM products WHERE product_id= :id', [
+        'id' => $product_id 
+    ])->findOrFail();
+
+    var_dump($product['product_image']);
 
     if (isset($_FILES['image1']) && $_FILES['image1']['error'] === UPLOAD_ERR_OK) {
+        $imagePath = 'public/imgs/' . $product['product_image'];
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $picture_name = uniqid('image_', true);
         $image1 = $_FILES['image1']['tmp_name'];
         $image_name1 = $picture_name . "1.jpeg";
         move_uploaded_file($image1, "public/imgs/" . $image_name1);
@@ -34,6 +44,11 @@ if(isset($_GET['product_id'])){
 
 
     if (isset($_FILES['image2']) && $_FILES['image2']['error'] === UPLOAD_ERR_OK) {
+        $imagePath = 'public/imgs/' . $product['product_image2'];
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $picture_name = uniqid('image_', true);
         $image2 = $_FILES['image2']['tmp_name'];
         $image_name2 = $picture_name . "2.jpeg";
         move_uploaded_file($image2, "public/imgs/" . $image_name2);
@@ -43,6 +58,11 @@ if(isset($_GET['product_id'])){
 
 
     if (isset($_FILES['image3']) && $_FILES['image3']['error'] === UPLOAD_ERR_OK) {
+        $imagePath = 'public/imgs/' . $product['product_image3'];
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $picture_name = uniqid('image_', true);
         $image3 = $_FILES['image3']['tmp_name'];
         $image_name3 = $picture_name . "3.jpeg";
         move_uploaded_file($image3, "public/imgs/" . $image_name3);
@@ -52,6 +72,11 @@ if(isset($_GET['product_id'])){
 
 
     if (isset($_FILES['image4']) && $_FILES['image4']['error'] === UPLOAD_ERR_OK) {
+        $imagePath = 'public/imgs/' . $product['product_image4'];
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+        $picture_name = uniqid('image_', true);
         $image4 = $_FILES['image4']['tmp_name'];
         $image_name4 = $picture_name . "4.jpeg";
         move_uploaded_file($image4, "public/imgs/" . $image_name4);

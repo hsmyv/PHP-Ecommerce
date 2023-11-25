@@ -5,8 +5,11 @@ $config = require('core/config.php');
 $db = new Database($config['database']);
 
 
+$categories = $db->query("SELECT * FROM categories")->get();
 
 if (isset($_POST['search'])) {
+
+    $_SESSION['selectedCategory'] = $_POST['category'];
 
         //1.determine page no
     if (isset($_GET['page_no']) && $_GET['page_no'] != "") {
@@ -27,7 +30,7 @@ if (isset($_POST['search'])) {
 
     //3. products per page
 
-    $total_records_per_page = 8;
+    $total_records_per_page = 30;
     $offset = ($page_no - 1) * $total_records_per_page;
     $previos_page = $page_no - 1;
     $next_page    = $page_no + 1;
@@ -62,7 +65,7 @@ if (isset($_POST['search'])) {
 
     //3. products per page
 
-    $total_records_per_page = 4;
+    $total_records_per_page = 30;
     $offset = ($page_no-1) * $total_records_per_page;
     $previos_page = $page_no - 1;
     $next_page    = $page_no + 1;

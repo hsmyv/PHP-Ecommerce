@@ -38,9 +38,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="edit-contact">
                     <span data-feather="layers"></span>
-                    Integrations
+                    Contact
                 </a>
             </li>
         </ul>

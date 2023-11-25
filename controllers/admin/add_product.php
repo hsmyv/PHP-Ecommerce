@@ -15,22 +15,45 @@ if (isset($_POST['create_product'])) {
     $offer       = $_POST['offer'];
     $category    = $_POST['category'];
 
-    $picture_name = uniqid('image_', true);
 
-    $image1      = $_FILES['image1']['tmp_name'];
-    $image2      = $_FILES['image2']['tmp_name'];
-    $image3      = $_FILES['image3']['tmp_name'];
-    $image4      = $_FILES['image4']['tmp_name'];
+    if (isset($_FILES['image1']) && $_FILES['image1']['error'] === UPLOAD_ERR_OK) {
+        $picture_name = uniqid('image_', true);
+        $image1 = $_FILES['image1']['tmp_name'];
+        $image_name1 = $picture_name . "1.jpeg";
+        move_uploaded_file($image1, "public/imgs/" . $image_name1);
+    }else {
+        $image_name1 = $product['product_image'];
+    }
 
-    $picture_name1 = $name . "1.jpeg";
-    $picture_name2 = $name . "2.jpeg";
-    $picture_name3 = $name . "3.jpeg";
-    $picture_name4 = $name . "4.jpeg";
 
-    move_uploaded_file($image1, "public/imgs/" . $image_name1);
-    move_uploaded_file($image2, "public/imgs/" . $image_name2);
-    move_uploaded_file($image3, "public/imgs/" . $image_name3);
-    move_uploaded_file($image4, "public/imgs/" . $image_name4);
+    if (isset($_FILES['image2']) && $_FILES['image2']['error'] === UPLOAD_ERR_OK) {
+        $picture_name = uniqid('image_', true);
+        $image2 = $_FILES['image2']['tmp_name'];
+        $image_name2 = $picture_name . "2.jpeg";
+        move_uploaded_file($image2, "public/imgs/" . $image_name2);
+    }else {
+        $image_name2 = $product['product_image2'];
+    }
+
+
+    if (isset($_FILES['image3']) && $_FILES['image3']['error'] === UPLOAD_ERR_OK) {
+        $picture_name = uniqid('image_', true);
+        $image3 = $_FILES['image3']['tmp_name'];
+        $image_name3 = $picture_name . "3.jpeg";
+        move_uploaded_file($image3, "public/imgs/" . $image_name3);
+    }else {
+        $image_name3 = $product['product_image3'];
+    }
+
+
+    if (isset($_FILES['image4']) && $_FILES['image4']['error'] === UPLOAD_ERR_OK) {
+        $picture_name = uniqid('image_', true);
+        $image4 = $_FILES['image4']['tmp_name'];
+        $image_name4 = $picture_name . "4.jpeg";
+        move_uploaded_file($image4, "public/imgs/" . $image_name4);
+    }else {
+        $image_name4 = $product['product_image4'];
+    }
 
     $create = $db->query(
         "INSERT INTO products( 

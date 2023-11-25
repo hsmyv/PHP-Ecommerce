@@ -39,13 +39,12 @@
                             <div class="form-group mt-2">
                                 <label for="">Category</label>
                                 <select class="form-select" required name="category" id="">
-                                    <option value="<?= $product['category_id'] ?>" <?php if ($product['category_id'] == '9') {
-                                                                echo "selected";
-                                                            } ?>>Iphone</option>
-                                    <option value="<?= $product['category_id'] ?>" <?php if ($product['category_id'] == '10') {
-                                                                echo "selected";
-                                                            } ?>>Samsung</option>
-                    
+                                    <?php foreach ($categories as $category) : ?>
+                                        <?php $isSelected = ($category['id'] == $product['category_id']); ?>
+                                        <option value="<?= $category['id'] ?>" <?= $isSelected ? 'selected' : '' ?>>
+                                            <?= $category['name'] ?>
+                                        </option>
+                                    <?php endforeach; ?>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -59,7 +58,7 @@
                             <div class="form-group mt-2">
                                 <label for="">Image 1</label>
                                 <img style="width:70px; height:70px;" src="/public/imgs/<?= $product['product_image'] ?>" alt="">
-                                <input type="file" class="form-control" id="image1" name="image1" placeholder="Image 1">
+                                <input type="file" class="form-control" id="image1" name="image1" placeholder="Image 1" >
                             </div>
                             <div class="form-group mt-2">
                                 <label for="">Image 2</label>

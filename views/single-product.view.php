@@ -45,7 +45,7 @@
 </section>
 
 <!--Related products-->
-<section id="related-products" class="my-5 pb-5">
+<!-- <section id="related-products" class="my-5 pb-5">
     <div class="container text-center mt-5 py-5">
         <h3>Related Products</h3>
         <hr class="mx-auto">
@@ -104,7 +104,7 @@
             <button class="buy-btn">Buy Now</button>
         </div>
     </div>
-</section>
+</section> -->
 
 
 

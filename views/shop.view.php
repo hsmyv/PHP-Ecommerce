@@ -1,4 +1,8 @@
-<?php require("partials/header.php") ?>
+<?php 
+$selectedCategory = isset($_SESSION['selectedCategory']) ? $_SESSION['selectedCategory'] : null;
+require("partials/header.php") 
+
+?>
 
 <style>
     .product img {
@@ -31,37 +35,21 @@
         <!---Search-->
         <section id="search" class="my-5 py-5 ms-2" style="display: flex; flex-direction: column; width: 20%;">
             <div class="container mt-5 py-5" style="display: flex; flex-direction: column;">
-                <p>Search Products</p>
+                <p><?= $translations["Search Products"]?></p>
                 <hr>
             </div>
             <form action="shop" method="POST">
                 <div class="row mx-auto container">
                     <div class="col-lg-12 col-md-12 col-sm-12">
-                        <p>Category</p>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" value="9" name="category" id="category_one" <?php if(isset($category) && $category==9){echo 'checked';}?>>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Iphone
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" value="10" name="category" id="category_two" <?php if(isset($category) && $category==10){echo 'checked';}?>>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Samsung
-                            </label>
-                        </div>
-                        <!-- <div class="form-check">
-                            <input type="radio" class="form-check-input" value="watches" name="category" id="category_two" <?php if(isset($category) && $category=='watches'){echo 'checked';}?>>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Watches
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" value="bags" name="category" id="category_one" <?php if(isset($category) && $category=='bags'){echo 'checked';}?>>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Bags
-                            </label>
-                        </div> -->
+                        <p><?= $translations["category"]?></p>
+                        <?php foreach ($categories as $category) : ?>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" value="<?= $category['id'] ?>" name="category" id="category_<?= $category['id'] ?>" <?php if ($selectedCategory == $category['id']) echo 'checked'; ?>>
+                                <label class="form-check-label" for="category_<?= $category['id'] ?>">
+                                    <?= $category['name'] ?>
+                                </label>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="row mx-auto container mt-5">
@@ -71,16 +59,16 @@
                                                                                             echo $price;
                                                                                         } else {
                                                                                             echo "100";
-                                                                                        } ?>" min="1" max="1000" id="customRange2">
+                                                                                        } ?>" min="1" max="10000" id="customRange2">
                         <div class="w-50">
-                            <span style="float: left;">1</span>
-                            <span style="float: right;">1000</span>
+                            <span style="float: left;">$1</span>
+                            <span id="priceDisplay" style="float: right;"><?php echo isset($price) ? $price : "$10000"; ?></span>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group my-3 mx-3">
-                    <input type="submit" name="search" value="Search" class="btn btn-primary">
+                    <input id="searchButton" type="submit" name="search" value="Search" class="btn btn-primary">
                 </div>
             </form>
         </section>
@@ -88,14 +76,14 @@
         <!--SHOP-->
         <section id="shop" class="my-5 py-5">
             <div class="container mt-5 py-5" style="display: flex; flex-direction: column;">
-                <h3>Our Products</h3>
+                <h3><?= $translations["Our Products"]?></h3>
                 <hr>
-                <p>Here you can check out our products</p>
+                <p><?= $translations["Here you can search our products"]?></p>
             </div>
             <div class="row mx-auto container">
                 <?php foreach ($products as $product) : ?>
                     <div class="product text-center col-lg-3 col-md-4 cold-sm-12">
-                        <img class="img-fluid mb-3" src="public/imgs/<?= $product['product_image'] ?>" alt="">
+                        <img style="width:auto; height: 50%;" class="img-fluid mb-3" src="public/imgs/<?= $product['product_image'] ?>" alt="">
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -105,14 +93,14 @@
                         </div>
                         <h5 class="p-name"><?= $product['product_name'] ?></h5>
                         <h4 class="p-price"><?= $product['product_price'] ?></h4>
-                        <a href="product?id=<?= $product['product_id'] ?>"><button class="shop-buy-btn">Buy Now</button></a>
+                        <a href="product?id=<?= $product['product_id'] ?>"><button class="shop-buy-btn"><?= $translations["Buy Now"]?></button></a>
                     </div>
                 <?php endforeach; ?>
 
                 <nav aria-label="Page navigation example" class="mx-auto">
                     <ul class="pagination mt-5 mx-auto">
                         <li class="page-item <?php if ($page_no <= 1) {echo 'disabled';} ?>">
-                            <a class="page-link" href="<?php if ($page_no <= 1) {echo '#';} else {echo "?page_no=" . ($page_no - 1);} ?>">Previous</a>
+                            <a class="page-link" href="<?php if ($page_no <= 1) {echo '#';} else {echo "?page_no=" . ($page_no - 1);} ?>"><?= $translations["Previous"]?></a>
                         </li>
                         <li class="page-item"><a class="page-link">1</a></li>
                         <li class="page-item"><a class="page-link">2</a></li>
@@ -130,7 +118,7 @@
                                                             echo '#';
                                                         } else {
                                                             echo "?page_no=" . ($page_no + 1);
-                                                        } ?>">Next</a>
+                                                        } ?>"><?= $translations["Next"]?></a>
                         </li>
                     </ul>
                 </nav>
@@ -140,7 +128,33 @@
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Initially hide the Search button
+            $('#searchButton').hide();
+
+            $('input[name="category"]').change(function () {
+                if ($('input[name="category"]:checked').length > 0) {
+                    $('#searchButton').show();
+                } else {
+                    $('#searchButton').hide();
+                }
+            });
+            if ($('input[name="category"]:checked').length > 0) {
+                    $('#searchButton').show();
+            }
+        });
+    </script>
 
 
+    <script>
+    var priceRange = document.getElementById('customRange2');
+    var priceDisplay = document.getElementById('priceDisplay');
+
+    priceRange.addEventListener('input', function () {
+        priceDisplay.textContent = "$" + this.value;
+    });
+</script>
     <!--Footer-->
     <?php require("partials/footer.php") ?>

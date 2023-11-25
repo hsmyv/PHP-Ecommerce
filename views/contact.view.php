@@ -5,15 +5,22 @@
 <?php require("partials/nav.php") ?>
 
 
-
+<?php 
+$config = require('core/config.php');
+$db = new Database($config['database']);
+$contact = $db->query('SELECT * FROM contact WHERE id= :id', [
+        'id' => 1,
+    ])->findOrFail();
+    
+?>
 <!--Contact-->
 <section id="contact" class="container my-5 py-5">
     <div class="container text-center mt-5">
-        <h3>Contact Us</h3>
+        <h3><?= $translations['contactus'] ?></h3>
         <hr class="mx-auto">
-        <p class="w-50 mx-auto">Phone number: <span>123 556 789</span></p>
-        <p class="w-50 mx-auto">Email address: <span>infor@apple.com</span></p>
-        <p class="w-50 mx-auto">We work: <span>24/7 to answer your questions</span></p>
+        <p class="w-50 mx-auto"><?= $translations['Phone number'] ?>: <span><?= $contact['phone']?></span></p>
+        <p class="w-50 mx-auto"><?= $translations['Email address'] ?>: <span><?= $contact['email']?></span></p>
+        <p class="w-50 mx-auto"><?= $translations['We work'] ?>: <span><?= $contact['wework']?></span></p>
     </div>
 
 

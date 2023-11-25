@@ -13,6 +13,7 @@ return $routes = [
     '/payment'               => 'controllers/payment.php',
     '/order_details'         => 'controllers/order_details.php',
     '/complete_payment'      => 'server/complete_payment.php',
+    '/language'              => 'controllers/set_language.php',
     '/admin/index'           => 'controllers/admin/index.php',
     '/admin/login'           => 'controllers/admin/login.php',
     '/admin/register'        => 'controllers/admin/register.php',
@@ -28,5 +29,6 @@ return $routes = [
     '/admin/edit-category'   => 'controllers/admin/edit_category.php',
     '/admin/delete-category' => 'controllers/admin/delete_category.php',
     '/admin/account'         => 'controllers/admin/account.php',
+    '/admin/edit-contact'    => 'controllers/admin/edit-contact.php'
 
 ];
